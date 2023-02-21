@@ -8,11 +8,14 @@ import cv2
 model = load_model('my_model.h5')
 
 # Function to preprocess the input image
-def preprocess_image(img_path):
-    img = image.load_img(img_path, target_size=(224, 224))
-    img_array = image.img_to_array(img)
+def preprocess_image(uploaded_file):
+    img = Image.open(uploaded_file)
+    img = img.convert('RGB')
+    img = img.resize((224, 224))
+    img_array = np.array(img)
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
+
 
 # Function to make predictions on the input image
 def predict(image):
