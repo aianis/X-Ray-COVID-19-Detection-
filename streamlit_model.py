@@ -3,6 +3,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import cv2
+from PIL import Image
 
 # Load the pre-trained model
 model = load_model('my_model.h5')
@@ -15,6 +16,7 @@ def preprocess_image(uploaded_file):
     img_array = np.array(img)
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
+
 
 
 # Function to make predictions on the input image
