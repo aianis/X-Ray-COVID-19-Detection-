@@ -3,7 +3,7 @@ from tensorflow.python.keras.layers import *
 from tensorflow.python.keras.models import * 
 from tensorflow.keras.utils import plot_model
 import os 
-os.system("cls") # Clear the terminal 
+os.system("cls") 
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE" # To avoid the error: "OMP: Error #15: Initializing libiomp5.dylib, but found libiomp5.dylib already initialized."
 
 # model architecture 
@@ -13,7 +13,7 @@ model.add(Conv2D(32, kernel_size=(3, 3), activation="relu"))
 model.add(MaxPooling2D(pool_size=(2, 2))) 
 model.add(Dropout(0.25))
 
-# Adding additional layers for increased complexity
+# additional layers for increased complexity
 model.add(Conv2D(64, kernel_size=(3, 3), activation="relu")) 
 model.add(Conv2D(64, kernel_size=(3, 3), activation="relu")) 
 model.add(MaxPooling2D(pool_size=(2, 2))) 
