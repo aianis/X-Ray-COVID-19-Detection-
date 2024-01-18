@@ -6,11 +6,16 @@ This project uses Convolutional Neural Networks (CNN) for detecting COVID-19 in 
 
 This project uses the following dependencies:
 
-- streamlit==1.5.0
-- tensorflow==2.5.0
-- opencv-python-headless==4.5.2.54
-- numpy==1.23.4
-- Pillow==9.0.0
+```bash 
+
+  streamlit==1.5.0
+  tensorflow==2.5.0
+  opencv-python-headless==4.5.2.54
+  numpy==1.23.4
+  Pillow==9.0.0
+
+```
+ 
 
 ## Installation
 
